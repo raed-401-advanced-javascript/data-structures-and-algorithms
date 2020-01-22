@@ -1,24 +1,19 @@
 'use strict';
 
 let insertShiftArray  = function (arr,target){
-    let length_of_arr = Math.ceil(arr.length/2)
-    let new_version = arr 
-    console.log(length_of_arr,'length')
-    for(let i=0;i>arr.length;i++){
-        console.log(i,'i')
-        if(i==length_of_arr){
-            let check = arr[i]
-            arr[i] = target
-            arr[i+1] = check
-        }if(i>length_of_arr){
-            let output= arr[i]
-            arr[i+1] = new_version[i]
-        }else{
-            arr[i] = arr[i]
+    let half_array = Math.ceil(arr.length/2); // to slice array to the two half
+    let new_array = new Array(arr.length+1);
+    for(let i = 0;i<=half_array;i++){
+        if(i === half_array){
+            new_array[i] = target
+        }if(i< half_array){
+            new_array[i] = arr[i]
         }
+    }for(let w = half_array ;w<new_array.length-1;w++){
+        new_array[w+1] = arr[w];
+
     }
-    return arr
-    
+    return new_array
 }   
 
 
