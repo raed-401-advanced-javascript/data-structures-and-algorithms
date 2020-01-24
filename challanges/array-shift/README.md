@@ -8,6 +8,6 @@ the challange have good point which is here you need to increase the length of a
 in the worst case the big O notation will be O(n) cause the loop will go to the length of the  first half array also another loop go through the seconed half of the array some time will be length +1 but that called static in complexity will not count    
 
 ## Solution
-![white borad](/home/student52/temp/project_folder/codefellows_401/data-structures-and-algorithms/assets/82909218_266073641020959_156133043440975872_n.jpg)
+![white borad](../../assets/82909218_266073641020959_156133043440975872_n.jpg)
 
-![white borad](/home/student52/temp/project_folder/codefellows_401/data-structures-and-algorithms/assets/82909218_266073641020959_156133043440975872_n.jpg)
+![white borad](../../assets/82909218_266073641020959_156133043440975872_n.jpg)
