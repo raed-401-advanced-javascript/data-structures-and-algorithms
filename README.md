@@ -6,8 +6,8 @@
 
 ### Links and Resources
 
-- [submission PR](https://github.com/raed-401-advanced-javascript/data-structures-and-algorithms/pull/3)
-- [ci/cd](https://github.com/raed-401-advanced-javascript/data-structures-and-algorithms/pull/3/checks?check_run_id=408542006) (GitHub Actions)
+- [submission PR](https://github.com/raed-401-advanced-javascript/data-structures-and-algorithms/pull/2)
+- [ci/cd](https://github.com/raed-401-advanced-javascript/data-structures-and-algorithms/pull/2/checks?check_run_id=408585454) (GitHub Actions)
 
 ### Setup
 
