@@ -13,6 +13,6 @@ describe('check the node ',()=>{
     expect(ll.include(100)).toBeTruthy();
   });
   it('check if the convert to string method work',()=>{
-      expect(typeof(ll.convert_to_string())).toEqual('string')
-  })
+    expect(typeof(ll.convert_to_string())).toEqual('string');
+  });
 });
