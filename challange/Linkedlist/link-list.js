@@ -37,5 +37,26 @@ class Node {
       string_version = string_version + `NULL`;
       return string_version;
     }
-    
+    append(value){
+      let flag = true  
+      while( this.size && flag ){
+        if(this.head.next === null){
+          // this.head = this.head.next
+          console.log(this.head.next)
+          this.head.next = new Node(value)
+          flag = false
+        }else{
+          console.log(this.head.data)  
+          this.head = this.head.next
+          // console.log(this.head)
+          this.size = this.size - 1 
+        }       
+      }
+    }
   }
+
+let ll = new Link();
+ll.insert(100);
+ll.insert(200);
+ll.append(500);
+console.log(ll)
