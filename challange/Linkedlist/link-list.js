@@ -1,3 +1,5 @@
+'use strict';
+
 class Node {
   constructor(data,next= null){
     this.data = data ;
@@ -14,31 +16,30 @@ class Link {
     this.head = new Node(data,this.head);
     this.size = this.size + 1;
   }
-  include(data){
-    // console.log(this.head);
-    while(this.size){
-      console.log(this.head.data);
-      if(data === this.head.data){
-        return true;
+  from_the_end(position){
+    // console.log(this.size)
+    let current = this.head;
+    this.size = this.size - 1;
+    while(current){
+      if(this.size == position){
+        console.log('hi',this.size,current.data);
+        return current.data;
+      }else{
+        current = current.next;
+        this.size = this.size - 1;
       }
-      this.head = this.head.next;
-      this.size = this.size - 1;
     }
-    return false;
-  }
-  convert_to_string(){
-    let string_version = '';
-    while(this.head ){
-    //   console.log(this.head.data)
-      string_version = string_version + `{${this.head.data}}` + ` -> `;
-      this.head = this.head.next;
-    }
-    string_version = string_version + `NULL`;
-    return string_version;
+    return 'excpetion';
   }
   
 }
-
+// let ll = new Link()
+// ll.insert(5)
+// ll.insert(4)
+// ll.insert(3)
+// ll.insert(2)
+// ll.insert(1)
+// console.log(ll.from_the_end(-5))
 
 
 module.exports = {Node,Link};
