@@ -17,28 +17,6 @@ class Node {
       this.head = new Node(data,this.head);
       this.size = this.size + 1;
     }
-    include(data){
-      // console.log(this.head);
-      while(this.size){
-        console.log(this.head.data);
-        if(data === this.head.data){
-          return true;
-        }
-        this.head = this.head.next;
-        this.size = this.size - 1;
-      }
-      return false;
-    }
-    convert_to_string(){
-      let string_version = '';
-      while(this.head ){
-      //   console.log(this.head.data)
-        string_version = string_version + `{${this.head.data}}` + ` -> `;
-        this.head = this.head.next;
-      }
-      string_version = string_version + `NULL`;
-      return string_version;
-    }
     append(value){
       let node = new Node(value);
       let current;
@@ -62,6 +40,10 @@ class Node {
         let flag = true
         current = this.head
         while(current.next && flag){
+          if(current.data === target){
+            current = new Node(new_vlaue,current)
+            flag = false
+          }
           if(current.next.data == target){
             // console.log("hi",current.next.data)
             current.next = new Node(new_vlaue,current.next)
@@ -94,19 +76,17 @@ class Node {
     }
   }
 
-let ll = new Link();
-ll.insert(200);
-ll.insert(100)
-ll.append(300);
-ll.added_before(50,100)
-ll.added_after(400,300)
-// ll.append(300);
-// ll.insert(500);
-// ll.insert(600);
-// console.log(Object.keys())
-console.log(util.inspect(ll, {showHidden: false, depth: null}))
-// let output = ll
-// console.log(output.head.next.next.next.next)
+// let ll = new Link();
+// ll.insert(2)
+// ll.insert(1)
+// ll.added_before(0,1)
+// // ll.append(300);
+// // ll.insert(500);
+// // ll.insert(600);
+// // console.log(Object.keys())
+// console.log(util.inspect(ll, {showHidden: false, depth: null}))
+// // let output = ll
+// // console.log(output.head.next.next.next.next)
 
 module.exports = {Node,Link}
 

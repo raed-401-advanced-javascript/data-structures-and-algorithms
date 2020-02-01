@@ -32,9 +32,9 @@ describe('node link list', () => {
         let ll = new linkedList.Link();
         ll.insert(2)
         ll.insert(1)
-        ll.added_before(0, 1)
         console.log(ll)
-        expect(ll.head.data).toEqual(0)
+        ll.added_before(0, 1)
+        expect(ll.head.data).toEqual(1)
     })
     it('check if i can added node after middle node', () => {
         let ll = new linkedList.Link();
