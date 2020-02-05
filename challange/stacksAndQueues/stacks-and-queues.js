@@ -19,56 +19,64 @@ class Stack {
         this.head = null
     }
     push(value){
-        if(!this.head){
-            // console.log('this.head',)
-            this.head = new Node(value);
-            this.top = this.head.data
-            // console.log('hi')
-        }else{
-            let current = this.head
-            // console.log('hi')
-            // console.log('this head',current)
-            while(current){
-                if(current.next == null){
-                    current.next = new Node(value)
-                    // this.head = current
-                    this.top = new Node(value)
-                    return current
-                }else{
-                    console.log(current.data)
-                    current = current.next
-                }
-            }
-        }
+        this.head = new Node(value,this.head)
+        this.top = value
     }
     pop(){
-        let current = this.head
-        while(current){
-            if(current.next.next == null && current.next.next == undefined){
-                this.top = current
-                current.next = null
-                return current.data;
-            }else{
-                current = current.next;
-            }
-        }
+        this.head = this.head.next
+        this.top = this.head.data
     }
     peek(){
-        return this.top.data
+        return this.top
     }
     isEmpty(){
         let current = this.head
         if(current){
-            return true
+            return false
         }
         else{
-            return false
+            return true
         } 
     }
 }
 
-let st = new Stack();
-st.push(5)
-st.push(4)
-st.push(3)
-console.log(JSON.stringify(st))
+class Qeue {
+    constructor(){
+        this.front = null;
+        this.head = null
+    }
+    enqueue(value){
+        this.head = new Node(value,this.head)
+        this.front = this.head.data  
+    }
+    dequeue(){
+        this.head = this.head.next
+        this.front = this.head.data
+    }
+    peek(){
+        return this.head.data
+    }
+    isEmpty(){
+        if(this.head){
+            return true 
+        }else{
+            return false
+        }
+    }
+}
+
+// let st = new Stack();
+// st.push(5)
+// st.push(4)
+// st.push(3)
+// st.pop()
+// console.log(st.isEmpty())
+// console.log(JSON.stringify(st))
+
+let qu = new Qeue();
+qu.enqueue(5)
+qu.enqueue(4)
+qu.enqueue(3)
+qu.dequeue()
+console.log(qu.isEmpty())
+console.log(JSON.stringify(qu))
