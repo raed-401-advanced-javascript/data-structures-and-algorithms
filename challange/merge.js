@@ -22,8 +22,11 @@ function devide(arr){
     if(arr.length<2){
         return arr
     }
-    let middle  = Math.floor(arr/2)
+    let middle  = Math.floor(arr.length/2)
+    console.log(middle)
     let left = arr.slice(0,middle)
     let right = arr.slice(middle)
     return sort(devide(left),devide(right))
 }
+console.log(devide([2,6,3,9,5,8,1,0]))
+
