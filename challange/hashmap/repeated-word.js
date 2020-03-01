@@ -71,9 +71,23 @@ class Hashtable {
     }
 
 }
-let h_t = new Hashtable(1024)
-h_t.set('name','ahmad')
-h_t.set('name','raed')
-h_t.set('name','khalid')
-h_t.set('age','25')
-console.log('what i want',h_t.contain('name'))
+function first_repeate(str){
+    let input_concat = '' 
+    let hash = new Hashtable(1024)
+    for(let i=0;i<str.length;i++){
+        if(str[i]==' '){
+            console.log(input_concat)
+            hash.set(input_concat)
+            input_concat = ''
+        }else{
+            input_concat = input_concat + `${str[i]}`
+        }
+    }
+} 
+console.log(first_repeate("Once upon a time, there was a brave princess who..."))
+// let h_t = new Hashtable(1024)
+// h_t.set('name','ahmad')
+// h_t.set('name','raed')
+// h_t.set('name','khalid')
+// h_t.set('age','25')
+// console.log('what i want',h_t.get('name'))
