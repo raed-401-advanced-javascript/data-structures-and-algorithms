@@ -71,7 +71,7 @@ class Hashtable {
     }
 
 }
-function first_repeate(str){
+let first_repeate = function(str){
     let input_concat = '' 
     let hash = new Hashtable(1024)
     for(let i=0;i<str.length;i++){
@@ -87,6 +87,7 @@ function first_repeate(str){
             input_concat = input_concat + `${str[i]}`
         }
     }
+    return 'sorry there is no duplicate'
 } 
 console.log(first_repeate("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only..."))
 // let h_t = new Hashtable(1024)
@@ -95,3 +96,5 @@ console.log(first_repeate("It was the best of times, it was the worst of times, 
 // h_t.set('name','khalid')
 // h_t.set('age','25')
 // console.log('what i want',h_t.get('name'))
+
+module.exports = {Node ,linked,Hashtable,first_repeate}
