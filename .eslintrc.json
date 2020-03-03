@@ -1,5 +1,6 @@
  
 {
+=======
   "env": {
     "browser": true,
     "node": true,
@@ -25,3 +26,4 @@
     "semi": [ "error", "always" ]
   }
 }
+
